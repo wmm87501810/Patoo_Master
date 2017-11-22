@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_bg"
+              android:orientation="vertical"
+              tools:context="com.shishiTec.HiMaster.UI.Activity.UserCenter.MyMDActivity"
+        >
+
+    <include layout="@layout/include_toolbar"/>
+
+
+    <RelativeLayout
+            android:id="@+id/to_detail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_80px"
+            android:layout_marginTop="@dimen/gap_20px"
+            android:background="@android:color/white"
+            android:paddingLeft="@dimen/gap_20px"
+            android:paddingRight="@dimen/gap_20px"
+            >
+
+        <TextView
+                android:id="@+id/show_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/can_use_m"
+                android:textColor="@color/color_4242"
+                android:textSize="@dimen/gap_30px"
+                />
+
+        <TextView
+                android:id="@+id/my_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/gap_20px"
+                android:layout_toRightOf="@id/show_t"
+                android:text="1000"
+                android:textColor="@color/color_ffd801"
+                android:textSize="@dimen/gap_34px"
+                />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:src="@mipmap/next"
+                />
+    </RelativeLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_100px"
+            android:layout_marginTop="@dimen/gap_20px"
+            android:background="@android:color/white"
+            android:paddingLeft="@dimen/gap_20px"
+            >
+
+        <ImageView
+                android:layout_width="@dimen/gap_10px"
+                android:layout_height="@dimen/gap_30px"
+                android:layout_gravity="center_vertical"
+                android:background="@color/color_ffd801"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/gap_20px"
+                android:text="兑换体验课"
+                android:textColor="@color/color_4242"
+                android:textSize="@dimen/gap_30px"
+                />
+
+
+    </LinearLayout>
+
+    <com.shishiTec.HiMaster.UI.Views.SuperSwipeRefreshLayout
+            android:id="@+id/refresh_md"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:dividerHeight="@dimen/gap_20px"
+            >
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView_md"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:dividerHeight="@dimen/gap_20px"
+                >
+
+        </android.support.v7.widget.RecyclerView>
+    </com.shishiTec.HiMaster.UI.Views.SuperSwipeRefreshLayout>
+    <!--<include layout="@layout/include_recyclerview" />-->
+</LinearLayout>

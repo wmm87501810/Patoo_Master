@@ -1,0 +1,222 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.1'
+
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+
+    defaultConfig {
+        resConfigs "zh"//只支持中文
+        applicationId "com.shishiTec.HiMaster"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        //个推参数
+        manifestPlaceholders = [
+                GETUI_APP_ID : "4wtrDLT5pS9IspxQxSNLM9",
+                GETUI_APP_KEY : "iBDWlHAah68vXM7mUZjgW6",
+                GETUI_APP_SECRET : "dMOCEofNy783aNcPS2sel7",
+                PACKAGE_NAME : applicationId
+        ]
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"//不显示和log
+            minifyEnabled false//是否混淆
+            shrinkResources false//删除没有使用到的资源文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        //apk输出名Master_渠道名.apk
+                        def fileName = "Master_${variant.productFlavors[0].name}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+    }
+    sourceSets {
+        main{
+            java.srcDirs = ['src/main/java','src/main/java-gen']
+        }
+    }
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_8
+//        targetCompatibility JavaVersion.VERSION_1_8
+//    }
+
+    //多渠道打包
+    productFlavors {
+        master {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Master"]
+        }
+        xiaomi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "小米"]
+        }
+        _360 {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "360"]
+        }
+        baidu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "百度"]
+        }
+        wandoujia {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "豌豆荚"]
+        }
+        nduo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "N多"]
+        }
+        huawei {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "华为"]
+        }
+        jifeng {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "机锋"]
+        }
+        taobao {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "taobao"]
+        }
+        ppzhushou {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "PP助手"]
+        }
+        yingyonbao {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "应用宝"]
+        }
+        _91 {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "91"]
+        }
+        yingyonhui {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "应用汇"]
+        }
+        anzhuo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "安卓"]
+        }
+        lianxiang {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "联想"]
+        }
+        anzhi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "安智"]
+        }
+        liantonwo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "联通沃"]
+        }
+        tianyikonjian {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "天翼空间"]
+        }
+        yidonMM {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "移动MM"]
+        }
+        mumayi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "木蚂蚁"]
+        }
+        youyi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "优亿"]
+        }
+        liqu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "历趣"]
+        }
+        meizu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "魅族商店"]
+        }
+        oppo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "oppo应用商店"]
+        }
+        sougou {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "搜狗手机助手"]
+        }
+        uc {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "UC"]
+        }
+    }
+
+//    dataBinding {
+//        enabled = true
+//    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile project(':OneKeyShare')
+    compile files('libs/baidumapapi_map_v3_7_3.jar')
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/locSDK_6.13.jar')
+    compile files('libs/alipaysdk.jar')
+    compile files('libs/alipaysecsdk.jar')
+    compile files('libs/alipayutdid.jar')
+    compile files('libs/UPPayAssistEx.jar')
+    compile files('libs/UPPayPluginExPro.jar')
+    compile files('libs/libammsdk.jar')
+    //二维码
+    compile files('libs/zxing.jar')
+    //个推
+    compile 'com.getui:sdk:2.8.1.0'
+    compile 'com.getui:ext:2.0.3'
+    //compile 'com.android.support:support-v4:+'
+
+    //xUtils3 网络请求框架
+
+    //自动适配布局
+
+    //轮播点击控件
+    compile 'com.android.support:percent:25.0.1'
+    compile 'com.bigkoo:pickerview:2.0.8'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.0.1'
+    compile 'com.android.support:palette-v7:25.0.1'
+    //compile 'com.android.support:recyclerview-v7:25.0.1'
+    compile 'com.android.support:recyclerview-v7:25.0.1'
+    compile 'com.android.support:cardview-v7:25.0.1'
+    compile 'com.android.support:support-v4:25.0.1'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.google.code.gson:gson:2.5'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.orhanobut:logger:1.11'
+    compile 'com.github.bumptech.glide:okhttp-integration:1.4.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.0'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'io.reactivex:rxjava:1.1.0'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'org.xutils:xutils:3.5.0'
+    compile 'com.zhy:autolayout:1.4.3'
+    compile 'me.relex:circleindicator:1.1.8@aar'
+    //FlycoTabLayout
+
+    //compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.6@aar'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.7.1@aar'
+    //节操
+    compile project(':layoutmanager')
+    compile 'fm.jiecao:jiecaovideoplayer:3.2'
+    compile 'q.rorbin:badgeview:1.1.2'
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    compile files('libs/org.eclipse.paho.client.mqttv3-1.0.2.jar')
+    //compile files('libs/org.eclipse.paho.client.mqttv3-1.1.0.jar')
+    compile files('libs/org.eclipse.paho.android.service-1.0.2.jar')
+}

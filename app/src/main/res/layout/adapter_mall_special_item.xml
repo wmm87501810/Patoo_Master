@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/special_item_ar"
+            android:layout_width="250px"
+            android:layout_height="340px"
+            android:background="@drawable/border"
+            android:layout_marginLeft="@dimen/gap_10px"
+            android:layout_marginTop="@dimen/gap_24px"
+            android:layout_marginBottom="@dimen/gap_24px"
+            >
+        <ImageView
+                android:id="@+id/class_cover"
+                android:layout_width="200px"
+                android:layout_height="200px"
+                android:src="@mipmap/jiazanshibaitu"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/gap_24px"
+                />
+        <TextView
+                android:id="@+id/class_title"
+                android:layout_width="200px"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_below="@id/class_cover"
+                android:layout_marginTop="22px"
+                android:layout_marginLeft="@dimen/gap_24px"
+                android:textColor="@color/black"
+                android:textSize="@dimen/gap_24px"
+                />
+        <TextView
+                android:id="@+id/class_new_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_below="@id/class_title"
+                android:layout_marginTop="22px"
+                android:layout_marginLeft="@dimen/gap_24px"
+                android:textColor="#d12210"
+                android:textSize="@dimen/gap_32px"
+                />
+        <TextView
+                android:id="@+id/class_old_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_below="@id/class_title"
+                android:layout_toRightOf="@id/class_new_price"
+                android:layout_marginTop="32px"
+                android:layout_marginLeft="@dimen/gap_20px"
+                android:textColor="@color/default_font_gray"
+                android:textSize="@dimen/gap_20px"
+
+                />
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+        android:id="@+id/video_play"
+        android:layout_width="match_parent"
+        android:layout_height="412px">
+    </fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard>
+    <TextView
+        android:id="@+id/tv_content"
+        android:textSize="32px"
+        android:layout_marginTop="42px"
+        android:layout_marginLeft="22px"
+        android:layout_marginRight="22px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字"/>
+</com.zhy.autolayout.AutoLinearLayout>

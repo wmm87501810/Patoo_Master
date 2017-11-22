@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+    <TextView
+            android:id="@+id/tv_course_title"
+            android:layout_width="match_parent"
+            android:layout_height="70px"
+            android:gravity="center_vertical"
+            android:paddingLeft="26px"
+            android:text="盘子里的小世界点心课"
+            android:textColor="@color/black"
+            android:textSize="@dimen/gap_36px"
+            />
+
+    <TextView
+            android:id="@+id/tv_course_price"
+            android:layout_width="match_parent"
+            android:layout_height="70px"
+            android:gravity="center_vertical"
+            android:paddingLeft="26px"
+            android:text="￥ 1"
+            android:textColor="@color/red"
+            android:textSize="@dimen/gap_30px"
+            />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rl_coupon"
+            android:layout_width="match_parent"
+            android:layout_height="70px"
+            >
+
+        <ImageView
+                android:id="@+id/img_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="26px"
+                android:src="@mipmap/quan"
+                />
+
+        <TextView
+                android:id="@+id/tv_course_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/gap_28px"
+                android:layout_toRightOf="@id/img_coupon"
+                android:gravity="center_vertical"
+                android:text="新用户购课减10元"
+                android:textColor="@color/black"
+                android:textSize="@dimen/gap_24px"
+                />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_1px"
+            android:background="@color/color_99"
+            />
+
+    <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/all_course_coupon"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_236px"
+            android:orientation="vertical"
+            >
+
+        <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/ar_rili"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+
+            <ImageView
+                    android:id="@+id/img_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="26px"
+                    android:src="@mipmap/rili"
+                    />
+
+            <TextView
+                    android:id="@+id/tv_time_period"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/gap_24px"
+                    android:layout_toRightOf="@id/img_calendar"
+                    android:gravity="center_vertical"
+                    android:text="1-19（周二）"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/gap_30px"
+                    />
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="26px"
+                    android:src="@mipmap/shangpingjikantou"
+                    />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/ar_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+
+            <ImageView
+                    android:id="@+id/img_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="26px"
+                    android:src="@mipmap/dizhi"
+                    />
+
+            <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/gap_28px"
+                    android:layout_toRightOf="@id/img_address"
+                    android:gravity="center_vertical"
+                    android:maxLength="24"
+                    android:maxLines="1"
+                    android:text="伟德路阳浦路"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/gap_30px"
+                    />
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="26px"
+                    android:src="@mipmap/shangpingjikantou"
+                    />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/ar_other_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+
+            <ImageView
+                    android:id="@+id/img_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="26px"
+                    android:src="@mipmap/dizhi"
+                    android:visibility="invisible"
+                    />
+
+            <TextView
+                    android:id="@+id/tv_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/gap_28px"
+                    android:layout_toRightOf="@id/img_other"
+                    android:gravity="center_vertical"
+                    android:text="其他地址"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/gap_30px"
+                    />
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="26px"
+                    android:src="@mipmap/shangpingjikantou"
+                    />
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/course_detail_recycler_ka"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+    </android.support.v7.widget.RecyclerView>
+
+    <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/al_course_cfg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+        <View
+                android:id="@+id/vs"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gap_20px"
+                android:background="@color/windowBackground"
+                />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gap_94px"
+                android:gravity="center_vertical"
+                android:paddingLeft="26px"
+                android:text="套餐"
+                android:textColor="@color/black"
+                android:textSize="@dimen/gap_30px"
+                />
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gap_1px"
+                android:layout_marginLeft="@dimen/gap_26px"
+                android:background="@color/color_99"
+                />
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_course_cfg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+        </android.support.v7.widget.RecyclerView>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/al_student"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_240px"
+            android:orientation="vertical"
+            >
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gap_20px"
+                android:background="@color/windowBackground"
+                />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/gap_38px"
+                >
+
+            <TextView
+                    android:id="@+id/tv_other_study"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="26px"
+                    android:gravity="center_vertical"
+                    android:text="他们也想学"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/gap_30px"
+                    />
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="26px"
+                    android:src="@mipmap/shangpingjikantou"
+                    />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_student"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38px"
+                >
+        </android.support.v7.widget.RecyclerView>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_20px"
+            android:background="@color/windowBackground"
+            />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/ar_course_home_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/gap_26px"
+            android:paddingBottom="@dimen/gap_40px"
+            android:paddingTop="@dimen/gap_40px"
+            >
+
+        <ImageView
+                android:id="@+id/course_personal_img_head"
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:src="@mipmap/jiazanshibaitu"
+                />
+
+        <TextView
+                android:id="@+id/course_head_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gap_24px"
+                android:layout_marginTop="@dimen/gap_12px"
+                android:layout_toRightOf="@id/course_personal_img_head"
+                android:text="长版空间"
+                android:textColor="@color/black"
+                android:textSize="@dimen/gap_36px"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/course_head_name"
+                android:layout_marginLeft="@dimen/gap_24px"
+                android:layout_marginTop="@dimen/gap_20px"
+                android:layout_toRightOf="@id/course_personal_img_head"
+                android:text="★ ★ ★"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/gap_24px"
+                />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/gap_26px"
+                android:src="@mipmap/arrow_right"
+                />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <WebView
+            android:id="@+id/web_course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    <TextView
+            android:id="@+id/curriculum_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/gap_26px"
+            android:text="进阶课程"
+            android:textColor="@color/black"
+            />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_1px"
+            android:layout_marginTop="@dimen/gap_26px"
+            android:background="@color/windowBackground"
+            />
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/course_detail_recycler_curriculum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_20px"
+            android:background="@color/windowBackground"
+            />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/share_num_AR"
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            >
+
+        <TextView
+                android:id="@+id/course_tv_share_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/gap_26px"
+                android:text="分享（1541）"
+                android:textColor="@color/black"
+                android:textSize="@dimen/gap_30px"
+                />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/gap_26px"
+                android:src="@mipmap/arrow_right"
+                />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_1px"
+            android:background="@color/windowBackground"
+            />
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/course_share_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/windowBackground"
+            android:paddingBottom="34px"
+            android:paddingLeft="@dimen/gap_26px"
+            android:paddingTop="52px"
+            android:text="猜你喜欢"
+            />
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/course_like_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_212px"
+            android:background="@color/windowBackground"
+            />
+</com.zhy.autolayout.AutoLinearLayout>

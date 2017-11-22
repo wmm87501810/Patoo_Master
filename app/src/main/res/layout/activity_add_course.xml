@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:fitsSystemWindows="true">
+    <include layout="@layout/include_toolbar"/>
+    <TextView
+        android:id="@+id/tv_course_null"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="60px"
+        android:text="暂无课程"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_course"
+        android:layout_height="660px"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:scrollbarStyle="outsideOverlay"
+        android:layout_alignParentBottom="true">
+    </android.support.v7.widget.RecyclerView>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/ar_select_course"
+        android:layout_height="78px"
+        android:layout_width="match_parent"
+        android:layout_above="@id/rv_course"
+        android:background="@color/white">
+        <TextView
+            android:textSize="28px"
+            android:textColor="#ADADAD"
+            android:text="选择一节课程"
+            android:layout_marginLeft="21px"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/iv_cancel"
+            android:layout_width="26px"
+            android:layout_height="26px"
+            android:layout_marginRight="21px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/cha" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_cc"
+            android:layout_alignParentBottom="true"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

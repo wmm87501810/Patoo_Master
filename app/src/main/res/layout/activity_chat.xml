@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/all_blackgroud"
+    android:orientation="vertical"
+   >
+
+    <com.shishiTec.HiMaster.UI.Views.SuperSwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recylerView_chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        </android.support.v7.widget.RecyclerView>
+    </com.shishiTec.HiMaster.UI.Views.SuperSwipeRefreshLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/all_bian"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <EditText
+            android:id="@+id/et"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="5"
+            android:paddingLeft="4dp"
+            android:textSize="14sp"
+             />
+
+        <Button
+            android:id="@+id/tvSend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="发送"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/all_bian"
+        android:orientation="horizontal"
+        android:padding="@dimen/gap_10dp"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/xiangce"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/paizhao"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/yiqiwan"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/jubao"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

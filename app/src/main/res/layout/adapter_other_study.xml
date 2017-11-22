@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+    <RelativeLayout
+            android:id="@+id/item_rl"
+            android:layout_width="match_parent"
+            android:layout_height="210px"
+            >
+
+        <ImageView
+                android:id="@+id/img_cover"
+                android:layout_width="130px"
+                android:layout_height="130px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/gap_20px"
+                android:src="@mipmap/jiazanshibaitu"
+                />
+
+        <TextView
+                android:id="@+id/tv_study_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/gap_20px"
+                android:layout_marginTop="68px"
+                android:layout_toRightOf="@id/img_cover"
+                android:text="title"
+                android:textColor="@color/default_font_color"
+                android:textSize="@dimen/gap_32px"
+                />
+
+        <TextView
+                android:id="@+id/tv_study_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_study_title"
+                android:layout_marginLeft="@dimen/gap_20px"
+                android:layout_marginTop="@dimen/gap_20px"
+                android:layout_toRightOf="@id/img_cover"
+                android:text="title"
+                android:textColor="@color/default_font_color"
+                android:textSize="@dimen/gap_32px"
+                />
+        <RelativeLayout
+                android:id="@+id/rl_study_people"
+                android:layout_width="81px"
+                android:layout_height="62px"
+                android:background="@drawable/border_radio_black"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/gap_20px"
+                >
+            <ImageView
+                    android:id="@+id/study_people_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/yellow_people"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/gap_1px"
+            android:background="@color/windowBackground"/>
+</LinearLayout>

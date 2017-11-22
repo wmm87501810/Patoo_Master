@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context="com.shishiTec.HiMaster.UI.Activity.UserCenter.BuyOrderActivity"
+        >
+
+    <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/test"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_alignParentTop="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            >
+
+        <ImageView
+                android:id="@+id/left_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16px"
+                android:src="@mipmap/arrow_black"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="他们也在学"
+                android:textColor="@color/black"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16px"
+                android:text="客服"
+                android:textColor="@color/black"
+                />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_1px"
+            android:background="@color/windowBackground"
+            />
+
+    <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tl_buy_order"
+            app:tl_divider_padding="13dp"
+            app:tl_divider_width="1dp"
+            app:tl_indicator_anim_enable="true"
+            app:tl_indicator_color="@color/default_yellow"
+            app:tl_indicator_height="@dimen/gap_10px"
+            app:tl_indicator_margin_left="@dimen/gap_10px"
+            app:tl_indicator_margin_right="@dimen/gap_10px"
+            app:tl_tab_space_equal="true"
+            app:tl_textSelectColor="@color/black"
+            app:tl_textUnselectColor="#808080"
+            app:tl_underline_color="#1A000000"
+            app:tl_underline_height="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:background="@color/white"
+            />
+
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/vp_buy_order"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

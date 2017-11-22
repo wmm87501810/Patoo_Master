@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_1px"
+            android:background="@color/darkgray"
+            />
+
+    <TextView
+            android:id="@+id/buyOrderTime"
+            android:layout_width="match_parent"
+            android:layout_height="70px"
+            android:background="@color/bg_color"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/gap_24px"
+            android:text="2015年10月1日"
+            android:textColor="@color/black"
+            android:textSize="@dimen/gap_24px"
+            />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_1px"
+            android:background="@color/darkgray"
+            />
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/buyOrderItemRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+    </android.support.v7.widget.RecyclerView>
+</com.zhy.autolayout.AutoLinearLayout>

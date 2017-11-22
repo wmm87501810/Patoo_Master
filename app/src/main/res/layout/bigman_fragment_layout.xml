@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <com.shishiTec.HiMaster.UI.Views.SuperSwipeRefreshLayout
+            android:id="@+id/bigman_swiperefreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            >
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/bigmanFragment_recyler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                >
+        </android.support.v7.widget.RecyclerView>
+    </com.shishiTec.HiMaster.UI.Views.SuperSwipeRefreshLayout>
+</com.zhy.autolayout.AutoLinearLayout>

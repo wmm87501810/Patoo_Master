@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/gap_42px"
+        android:layout_marginRight="@dimen/gap_42px"
+        android:background="@drawable/border_radio_gray"
+        android:orientation="vertical"
+        >
+
+    <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_88px"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="@dimen/gap_24px"
+            android:paddingTop="@dimen/gap_24px"
+            android:text="登录"
+            android:visibility="gone"
+            />
+
+    <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <TextView
+                android:id="@+id/tishi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="提示"
+                android:textColor="@color/black"
+                android:textSize="@dimen/gap_36px"
+                android:layout_marginTop="@dimen/gap_42px"
+                android:textStyle="bold"
+                />
+
+        <TextView
+                android:id="@+id/l"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tishi"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/gap_10px"
+                android:text="您还没有登录，是否去登录"
+                android:textColor="@color/black"
+                android:textSize="@dimen/gap_30px"
+                android:textStyle="normal"
+                />
+
+        <View
+                android:id="@+id/xian"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gap_1px"
+                android:layout_below="@id/l"
+                android:layout_marginTop="@dimen/gap_36px"
+                android:background="@color/color_99"
+                />
+
+        <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gap_100px"
+                android:layout_below="@id/xian"
+                android:orientation="horizontal"
+                >
+
+            <TextView
+                    android:id="@+id/not_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="残忍拒绝"
+                    android:textColor="#007aff"
+                    android:textSize="@dimen/gap_36px"
+                    />
+
+            <View
+                    android:layout_width="@dimen/gap_1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_99"
+                    />
+
+            <TextView
+                    android:id="@+id/login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="  去登陆  "
+                    android:textColor="#007aff"
+                    android:textSize="@dimen/gap_36px"
+                    />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

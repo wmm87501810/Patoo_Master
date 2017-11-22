@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="328px">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/show_negative"
+        android:layout_width="match_parent"
+        android:layout_height="328px"
+        android:layout_marginLeft="@dimen/gap_20px"
+        android:layout_marginRight="@dimen/gap_20px"
+        android:layout_marginTop="@dimen/gap_20px"
+        android:background="@drawable/card_bg_frame">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/gap_28px"
+            android:text="@string/how_use"
+            android:textSize="@dimen/gap_28px" />
+
+        <ImageButton
+            android:id="@+id/flip_intro"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:src="@mipmap/jiangyouka_chahao" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/flip_intro"
+            android:paddingBottom="@dimen/gap_40px"
+            android:paddingLeft="@dimen/gap_40px"
+            android:paddingRight="@dimen/gap_40px">
+
+            <TextView
+                android:id="@+id/use_intro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/gap_28px"
+                android:lineSpacingExtra="@dimen/gap_8px"
+                android:paddingBottom="@dimen/gap_40px"
+                android:paddingLeft="@dimen/gap_40px"
+                android:paddingRight="@dimen/gap_40px"
+                android:textColor="@color/color_66"
+                android:textSize="@dimen/gap_30px"
+                tools:text="酱油卡使用规则" />
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/show_front"
+        android:layout_width="match_parent"
+        android:layout_height="328px"
+        android:layout_marginLeft="@dimen/gap_20px"
+        android:layout_marginRight="@dimen/gap_20px"
+        android:layout_marginTop="@dimen/gap_20px">
+
+        <ImageView
+            android:id="@+id/card_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/flip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/gap_20px"
+            android:layout_marginTop="@dimen/gap_20px"
+            android:drawablePadding="@dimen/gap_36px"
+            android:drawableRight="@mipmap/jiangyouka_jiantu"
+            android:gravity="center"
+            android:text="@string/how_use"
+            android:textColor="@color/color_1a"
+            android:textSize="@dimen/gap_24px" />
+
+        <TextView
+            android:id="@+id/date_limit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_42px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/jiangyouka_yyuanjiaojuxing"
+            android:gravity="center_vertical|right"
+            android:paddingRight="@dimen/gap_20px"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/gap_20px"
+            tools:text="使用期限:" />
+    </RelativeLayout>
+
+</RelativeLayout>

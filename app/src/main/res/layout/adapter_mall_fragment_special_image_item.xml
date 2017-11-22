@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:orientation="vertical"
+        >
+
+    <ImageView
+            android:id="@+id/special_title_img"
+            android:layout_width="match_parent"
+            android:layout_height="420px"
+            android:scaleType="fitXY"
+            android:src="@mipmap/jiazanshibaitu"
+            />
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/adapter_mall_special_item_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16px"
+            >
+
+    </android.support.v7.widget.RecyclerView>
+</com.zhy.autolayout.AutoLinearLayout>

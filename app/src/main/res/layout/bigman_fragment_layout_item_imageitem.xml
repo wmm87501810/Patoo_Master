@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="180px"
+              android:layout_height="157px"
+              android:background="#ffffff"
+        >
+        <ImageView
+                android:id="@+id/item_image"
+                android:layout_width="155px"
+                android:layout_height="155px"
+                android:src="@mipmap/app_icon"
+                android:scaleType="fitXY"
+                />
+        <View
+                android:layout_width="24px"
+                android:layout_height="157px"
+                android:background="#ffffff"
+                android:layout_marginLeft="2px"/>
+</com.zhy.autolayout.AutoLinearLayout>

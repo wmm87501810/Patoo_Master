@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.shishiTec.HiMaster.UI.Views.PercentLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/color_bg"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        >
+
+    <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/gap_18dp"
+            app:layout_heightPercent="22%"
+            >
+
+        <ImageView
+                android:id="@+id/userCenter_icon"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="36dp"
+                tools:background="@mipmap/icon_default"
+                />
+
+        <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/userCenter_icon"
+                android:layout_marginLeft="@dimen/gap_12dp"
+                android:layout_marginTop="@dimen/gap_10dp"
+                android:layout_toRightOf="@id/userCenter_icon"
+                android:textColor="@color/userNameColor"
+                android:textSize="@dimen/font_16sp"
+                tools:text="憋说话"
+                />
+
+        <TextView
+                android:id="@+id/fans_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/userCenter_icon"
+                android:layout_marginBottom="@dimen/gap_10dp"
+                android:layout_marginLeft="@dimen/gap_10dp"
+                android:layout_toRightOf="@id/userCenter_icon"
+                android:text="@string/fans"
+                android:textColor="@color/color_53"
+                android:textSize="@dimen/font_12sp"
+                />
+
+        <TextView
+                android:id="@+id/follow_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/fans_number"
+                android:layout_marginLeft="@dimen/gap_24dp"
+                android:layout_toRightOf="@id/fans_number"
+                android:text="@string/atten"
+                android:textColor="@color/color_53"
+                android:textSize="@dimen/font_12sp"
+                />
+
+        <RelativeLayout
+                android:id="@+id/show_message"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                >
+
+            <ImageButton
+                    android:id="@+id/message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@null"
+                    android:src="@mipmap/xiaoxi"
+                    />
+
+            <ImageView
+                    android:id="@+id/icon_red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/message"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@id/message"
+                    android:background="@mipmap/yuandian"
+                    />
+        </RelativeLayout>
+
+        <ImageButton
+                android:id="@+id/to_setting"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/show_message"
+                android:background="@null"
+                android:src="@mipmap/shezhi"
+                />
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <LinearLayout
+            android:id="@+id/master_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_heightPercent="15%"
+            >
+
+        <RelativeLayout
+                android:id="@+id/scan_code"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+            <TextView
+                    android:id="@+id/scan_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="@dimen/gap_11dp"
+                    android:drawableTop="@mipmap/saoma"
+                    android:text="@string/scan_order"
+                    android:textColor="@color/color_66"
+                    android:textSize="@dimen/font_12sp"
+                    />
+        </RelativeLayout>
+
+        <ImageView
+                android:layout_width="@dimen/gap_1dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/color_99"
+                />
+
+        <RelativeLayout
+                android:id="@+id/order_manager"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+            <TextView
+                    android:id="@+id/tx_order_manager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawablePadding="@dimen/gap_11dp"
+                    android:drawableTop="@mipmap/dingdan"
+                    android:text="订单管理"
+                    android:textColor="@color/color_66"
+                    android:textSize="@dimen/font_12sp"
+                    />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/normal_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_heightPercent="15%"
+            >
+
+        <RelativeLayout
+                android:id="@+id/to_my_MD"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+            <TextView
+                    android:id="@+id/mNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/userNameColor"
+                    android:textSize="@dimen/font_16sp"
+                    tools:text="200点"
+                    />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mNumber"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/gap_7dp"
+                    android:text="@string/my_m_number"
+                    android:textColor="@color/color_53"
+                    android:textSize="@dimen/font_12sp"
+                    />
+        </RelativeLayout>
+
+        <ImageView
+                android:layout_width="@dimen/gap_1dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/color_99"
+                />
+
+        <RelativeLayout
+                android:id="@+id/to_voucher"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+            <TextView
+                    android:id="@+id/voucher_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/userNameColor"
+                    android:textSize="@dimen/font_16sp"
+                    tools:text="20元"
+                    />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/voucher_number"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/gap_7dp"
+                    android:text="@string/voucher"
+                    android:textColor="@color/color_99"
+                    android:textSize="@dimen/font_12sp"
+                    />
+        </RelativeLayout>
+
+        <ImageView
+                android:layout_width="@dimen/gap_1dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/color_99"
+                />
+
+        <RelativeLayout
+                android:id="@+id/to_card"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+            <TextView
+                    android:id="@+id/soyCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/userNameColor"
+                    android:textSize="@dimen/font_16sp"
+                    tools:text="20元"
+                    />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/soyCard"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/gap_7dp"
+                    android:text="@string/soyCard"
+                    android:textColor="@color/color_99"
+                    android:textSize="@dimen/font_12sp"
+                    />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/gap_20dp"
+            android:drawableLeft="@mipmap/fenxiang"
+            android:drawablePadding="@dimen/gap_13dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/gap_40dp"
+            android:text="@string/my_share"
+            android:textColor="@color/color_1a"
+            android:textSize="@dimen/font_15sp"
+            app:layout_heightPercent="9%"
+            />
+
+    <LinearLayout
+            android:id="@+id/user_center_buy_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/gap_40dp"
+            app:layout_heightPercent="9%"
+            >
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/goukedingdan"
+                />
+
+        <TextView
+                android:id="@+id/order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/gap_13dp"
+                android:text="@string/course_order"
+                android:textColor="@color/color_1a"
+                android:textSize="@dimen/font_15sp"
+                />
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/collect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/shoucang"
+            android:drawablePadding="@dimen/gap_13dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/gap_40dp"
+            android:text="@string/collect"
+            android:textColor="@color/color_1a"
+            android:textSize="@dimen/font_15sp"
+            app:layout_heightPercent="9%"
+            />
+
+    <TextView
+            android:id="@+id/my_voucher_bag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/kaquan"
+            android:drawablePadding="@dimen/gap_13dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/gap_40dp"
+            android:text="@string/my_voucher_bag"
+            android:textColor="@color/color_1a"
+            android:textSize="@dimen/font_15sp"
+            android:visibility="gone"
+            app:layout_heightPercent="9%"
+            />
+
+    <TextView
+            android:id="@+id/welfare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/duihuanma"
+            android:drawablePadding="@dimen/gap_13dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/gap_40dp"
+            android:text="@string/welfare"
+            android:textColor="@color/color_1a"
+            android:textSize="@dimen/font_15sp"
+            app:layout_heightPercent="9%"
+            />
+
+    <TextView
+            android:id="@+id/beMaster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/daren"
+            android:drawablePadding="@dimen/gap_13dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/gap_40dp"
+            android:text="@string/be_master"
+            android:textColor="@color/color_1a"
+            android:textSize="@dimen/font_15sp"
+            app:layout_heightPercent="9%"
+            />
+
+
+</com.shishiTec.HiMaster.UI.Views.PercentLinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+             android:background="@color/black"
+        >
+<ImageView
+        android:id="@+id/dialogImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/jiazanshibaitu"
+        android:scaleType="center"
+        android:layout_gravity="center"
+        />
+    <TextView
+            android:id="@+id/dialogInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:paddingBottom="50px"
+            android:paddingLeft="10px"
+            android:paddingRight="10px"
+            android:textColor="@color/white"
+            android:textSize="28px"
+            />
+</FrameLayout>

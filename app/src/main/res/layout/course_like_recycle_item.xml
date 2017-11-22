@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+
+    <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/like_item_ll"
+            android:layout_width="296px"
+            android:layout_height="400px"
+            android:orientation="vertical"
+            >
+
+        <ImageView
+                android:id="@+id/like_item_img"
+                android:layout_width="296px"
+                android:layout_height="296px"
+                android:src="@mipmap/jiazanshibaitu"
+                />
+
+        <TextView
+                android:id="@+id/like_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16px"
+                android:layout_marginTop="16px"
+                android:text="课程标题"
+                android:singleLine="true"
+                android:maxEms="8"
+                android:ellipsize="end"
+                android:textColor="@color/black"
+                android:textSize="@dimen/gap_26px"
+                />
+
+        <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16px"
+                android:layout_marginTop="@dimen/gap_24px"
+                android:layout_marginRight="16px"
+                >
+
+            <TextView
+                    android:id="@+id/like_item_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="漕河泾/田林"
+                    android:textSize="@dimen/gap_24px"
+                    />
+
+            <TextView
+                    android:id="@+id/like_item_Km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="2.6km"
+                    android:textSize="@dimen/gap_24px"
+                    />
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+            android:layout_width="16px"
+            android:layout_height="400px"
+            android:background="@color/windowBackground"
+            />
+</com.zhy.autolayout.AutoLinearLayout>

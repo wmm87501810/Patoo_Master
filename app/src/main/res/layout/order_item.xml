@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include
+        android:id="@+id/head"
+        layout="@layout/include_order_item"/>
+    <LinearLayout
+        android:layout_below="@id/head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gap_110px"
+        android:background="#fff">
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@null"/>
+
+        <Button
+            android:id="@+id/delete_order"
+            android:layout_width="160px"
+            android:layout_height="70px"
+            android:visibility="visible"
+            android:layout_marginRight="@dimen/gap_24px"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/gap_24px"
+            android:textColor="@color/black_ligh"
+            android:background="@drawable/frame_white_gray"
+            android:text="删除订单"/>
+        <Button
+            android:id="@+id/order_detail"
+            android:layout_width="160px"
+            android:layout_height="70px"
+            android:layout_marginRight="@dimen/gap_24px"
+            android:textSize="12sp"
+            android:textColor="@color/black_ligh"
+            android:background="@drawable/frame_white_gray"
+            android:text="查看课程"/>
+        <Button
+            android:id="@+id/btn_wait_grade"
+            android:layout_width="160px"
+            android:layout_height="70px"
+            android:visibility="visible"
+            android:layout_marginRight="@dimen/gap_24px"
+            android:text="@string/wait_grade"
+            android:textColor="#fff"
+            android:background="@drawable/button_wait_grade"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

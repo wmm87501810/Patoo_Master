@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+   <!-- <com.shishiTec.HiMaster.UI.Views.SwipeCardView
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        />-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+
+   <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/accept_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <com.shishiTec.HiMaster.UI.Views.CircleImageView
+                android:id="@+id/accept_head"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_del"
+                app:border_color="#ffffff"
+                app:border_width="0dp"
+                android:layout_marginRight="42dp"
+                android:layout_marginEnd="42dp"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/accept_head2"
+                android:layout_toStartOf="@+id/accept_head2" />
+            <com.shishiTec.HiMaster.UI.Views.CircleImageView
+                android:id="@+id/accept_head2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_love"
+                app:border_color="#ffffff"
+                app:border_width="0dp"
+                android:layout_marginRight="112dp"
+                android:layout_marginEnd="112dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

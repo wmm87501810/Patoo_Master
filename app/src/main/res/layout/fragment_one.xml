@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fragment_all_mall1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_white"
+        android:orientation="vertical"
+        >
+
+    <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/common_white"
+            android:orientation="vertical"
+            >
+
+        <android.support.v4.view.ViewPager
+                android:id="@+id/list"
+                style="@style/MyWidget.ListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="89px"
+                android:background="#fff4f7f9"
+                android:cacheColorHint="#00000000"
+                android:divider="#dddbdb"
+                android:dividerHeight="1.0px"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none"
+                >
+        </android.support.v4.view.ViewPager>
+
+        <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+            <include
+                    android:id="@+id/search_layout"
+                    layout="@layout/include_mall_home"
+                    />
+
+            <com.flyco.tablayout.SlidingTabLayout
+                    android:id="@+id/tl_mall"
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:background="@color/white"
+                    android:paddingBottom="10px"
+                    app:tl_tab_padding="64px"
+                    app:tl_divider_width="1dp"
+                    app:tl_indicator_anim_enable="true"
+                    app:tl_indicator_color="@color/default_yellow"
+                    app:tl_indicator_height="@dimen/gap_10px"
+                    app:tl_indicator_margin_left="@dimen/gap_10px"
+                    app:tl_indicator_margin_right="@dimen/gap_10px"
+                    app:tl_tab_space_equal="true"
+                    app:tl_textSelectColor="@color/black"
+                    app:tl_textUnselectColor="#808080"
+                    app:tl_underline_color="#1A000000"
+                    app:tl_underline_height="1dp"
+                    />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <!--<ImageView-->
+    <!--android:id="@+id/screen"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="right|bottom"-->
+    <!--android:layout_marginBottom="50px"-->
+    <!--android:src="@mipmap/screen"-->
+    <!--/>-->
+</com.zhy.autolayout.AutoFrameLayout>

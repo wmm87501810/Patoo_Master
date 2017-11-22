@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+    <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+        <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gap_88px"
+                >
+
+            <ImageView
+                    android:id="@+id/buy_order_item_people"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/gap_24px"
+                    android:src="@mipmap/buy_oredr_item_people"
+                    />
+
+            <TextView
+                    android:id="@+id/buy_order_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="14px"
+                    android:layout_toRightOf="@id/buy_order_item_people"
+                    android:text="小轩"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/gap_28px"
+                    />
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/gap_24px"
+                    android:layout_toRightOf="@id/buy_order_item_name"
+                    android:src="@mipmap/arrow_right"
+                    />
+
+            <TextView
+                    android:id="@+id/buy_order_item_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/gap_24px"
+                    android:text="待接单"
+                    android:textSize="@dimen/gap_28px"
+                    />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/gap_1px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/gap_24px"
+                    android:layout_marginRight="@dimen/gap_24px"
+                    android:background="@color/darkgray"
+                    />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="168px"
+                >
+
+            <ImageView
+                    android:id="@+id/buy_order_item_img_top"
+                    android:layout_width="126px"
+                    android:layout_height="120px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/gap_24px"
+                    android:src="@mipmap/jiazanshibaitu"
+                    />
+
+            <TextView
+                    android:id="@+id/buy_order_item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/gap_24px"
+                    android:layout_marginTop="40px"
+                    android:layout_toRightOf="@id/buy_order_item_img_top"
+                    android:text="瑜伽课"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/gap_28px"
+                    />
+
+            <TextView
+                    android:id="@+id/buy_order_item_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/buy_order_item_title"
+                    android:layout_marginLeft="@dimen/gap_24px"
+                    android:layout_marginTop="24px"
+                    android:layout_toRightOf="@id/buy_order_item_img_top"
+                    android:text="实付："
+                    android:textColor="@color/color_66"
+                    android:textSize="@dimen/gap_24px"
+                    />
+
+            <TextView
+                    android:id="@+id/buy_order_item_content_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/buy_order_item_title"
+                    android:layout_marginTop="24px"
+                    android:layout_toRightOf="@id/buy_order_item_content"
+                    android:text="¥120"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/gap_24px"
+                    />
+
+            <ImageView
+                    android:id="@+id/right_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/gap_24px"
+                    android:src="@mipmap/arrow_right"
+                    />
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/gap_24px"
+                    android:layout_toLeftOf="@id/right_next"
+                    android:src="@mipmap/erweima"
+                    />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/gap_1px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/gap_24px"
+                    android:layout_marginRight="@dimen/gap_24px"
+                    android:background="@color/darkgray"
+                    />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gap_110px"
+                >
+
+            <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal"
+                    >
+
+                <TextView
+                        android:id="@+id/buy_order_item_delete"
+                        android:layout_width="160px"
+                        android:layout_height="60px"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/gap_24px"
+                        android:background="@drawable/buy_order_item_border_radio"
+                        android:gravity="center"
+                        android:text="删除订单"
+                        android:textSize="@dimen/gap_24px"
+                        />
+
+                <TextView
+                        android:id="@+id/buy_order_item_see_curriculum"
+                        android:layout_width="160px"
+                        android:layout_height="60px"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/gap_24px"
+                        android:background="@drawable/buy_order_item_border_radio"
+                        android:gravity="center"
+                        android:text="查看课程"
+                        android:textSize="@dimen/gap_24px"
+                        />
+
+                <TextView
+                        android:id="@+id/buy_order_item_evaluate"
+                        android:layout_width="160px"
+                        android:layout_height="60px"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/gap_24px"
+                        android:background="@drawable/buy_order_item_border_yellow_radio"
+                        android:gravity="center"
+                        android:text="待评价"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/gap_24px"
+                        />
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="14px"
+                android:background="@color/bg_color"
+                />
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shishiTec.HiMaster.UI.Views.PercentLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/select_tab_text"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <!--<ImageView-->
+            <!--android:id="@+id/icon"-->
+            <!--android:layout_width="20dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:src="@mipmap/default_image"/>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_widthPercent="50%"
+            android:drawableLeft="@mipmap/icon_default"
+            android:gravity="center_vertical"
+            android:paddingLeft="20px"
+            android:layout_marginTop="5dp"
+            android:textSize="26px"
+            android:text="      牛人"
+            android:textColor="@color/black"
+            />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_widthPercent="50%"/>
+</com.shishiTec.HiMaster.UI.Views.PercentLinearLayout>

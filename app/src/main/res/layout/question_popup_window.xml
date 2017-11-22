@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/question_layout"
+        android:background="@color/white"
+        >
+    <TextView
+            android:id="@+id/cancel_question_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_40px"
+            android:gravity="right"
+            android:text="X"
+            android:textSize="@dimen/gap_40px"
+            android:paddingRight="@dimen/gap_26px"
+            />
+    <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="260px"
+            android:orientation="horizontal"
+            >
+
+        <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/ar_question_popup_private_letter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+            <ImageView
+                    android:id="@+id/question_popup_img_private_letter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/private_letter"
+                    />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question_popup_img_private_letter"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="28px"
+                    android:text="私信"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/gap_32px"
+                    />
+        </com.zhy.autolayout.AutoRelativeLayout>
+
+        <com.zhy.autolayout.AutoRelativeLayout
+                android:id="@+id/ar_question_popup_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+
+
+            <ImageView
+                    android:id="@+id/question_popup_img_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/private_letter"
+                    />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/question_popup_img_phone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="28px"
+                    android:text="电话"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/gap_32px"
+                    />
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

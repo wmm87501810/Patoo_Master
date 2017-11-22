@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_marginTop="15px"
+    android:layout_marginLeft="10px"
+    android:layout_marginRight="10px"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/al_reply_item">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.shishiTec.HiMaster.UI.Views.CircleImageView
+        android:id="@+id/iv_img_top"
+        android:layout_width="86px"
+        android:layout_height="86px"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="20px"
+        android:src="@color/default_yellow"/>
+        <TextView
+            android:id="@+id/tv_nike_name"
+            android:layout_toRightOf="@id/iv_img_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22px"
+            android:layout_marginTop="20px"
+            android:textColor="@color/default_font_color"
+            android:textSize="30px"
+            android:text="简简单单"/>
+        <TextView
+            android:id="@+id/tv_comment_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22px"
+            android:layout_marginTop="20px"
+            android:textSize="24px"
+            android:layout_below="@id/tv_nike_name"
+            android:layout_toRightOf="@id/iv_img_top"
+            android:textColor="@color/default_font_color"
+            android:text="2015-05-12"/>
+    </RelativeLayout>
+    <TextView
+        android:textSize="28px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="40px"
+        android:layout_marginBottom="20px"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="评论回复测试类容"
+        android:id="@+id/tv_content" />
+    <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:background="#dcdcdc"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginBottom="30px"
+        android:padding="20px"
+        android:layout_height="wrap_content"
+        android:text="减减丹丹回复momo"
+        android:id="@+id/tv_reply" />
+    <TextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginBottom="30px"
+        android:textColor="@color/black"
+        android:text="来自XXXXXX"
+        android:id="@+id/tv_from" />
+</com.zhy.autolayout.AutoLinearLayout>

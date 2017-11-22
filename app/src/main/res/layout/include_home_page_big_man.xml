@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:id="@+id/ll_my_share"
+        >
+
+    <com.zhy.autolayout.AutoRelativeLayout
+            android:id="@+id/rl_share_top"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:background="@color/windowBackground"
+            >
+
+        <TextView
+                android:id="@+id/share_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="我的分享"
+                android:textColor="@color/default_font_gray"
+                android:textSize="@dimen/gap_32px"
+                />
+
+        <TextView
+                android:layout_width="130px"
+                android:layout_height="5px"
+                android:layout_below="@id/share_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5px"
+                android:background="@color/default_yellow"
+                />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/gap_26px"
+            android:layout_marginTop="@dimen/gap_50px"
+            android:text="暂无分享"
+            android:textSize="@dimen/gap_36px"
+            android:visibility="gone"
+            />
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/include_big_man_home_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+    </android.support.v7.widget.RecyclerView>
+</com.zhy.autolayout.AutoLinearLayout>

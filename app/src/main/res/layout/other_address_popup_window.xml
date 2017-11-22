@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/address_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_1px"
+            android:background="@color/windowBackground"
+            />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="78px"
+            >
+
+        <TextView
+                android:id="@+id/choose_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/gap_26px"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/gap_28px"
+                />
+
+        <TextView
+                android:id="@+id/cancel_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/gap_26px"
+                android:text="X"
+                android:textColor="@color/black"
+                android:textSize="@dimen/gap_28px"
+                />
+    </RelativeLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_1px"
+            android:background="@color/windowBackground"
+            />
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/choose_other_address_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+    </android.support.v7.widget.RecyclerView>
+
+</com.zhy.autolayout.AutoLinearLayout>

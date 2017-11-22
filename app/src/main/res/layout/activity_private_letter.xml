@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+        >
+
+    <include layout="@layout/include_toolbar"/>
+
+    <LinearLayout
+            android:id="@+id/input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="15px"
+            android:background="#eeeeee"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+            <EditText
+                    android:id="@+id/input_edit"
+                    android:layout_width="0px"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="24px"
+                    android:layout_marginTop="10px"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:imeOptions="actionSend"
+                    android:singleLine="true"
+                    android:textSize="15sp"
+                    />
+
+            <ImageButton
+                    android:id="@+id/iv_post_face"
+                    android:layout_width="100px"
+                    android:layout_height="100px"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:paddingLeft="26px"
+                    android:paddingRight="30px"
+                    android:src="@mipmap/icon_pl_03"
+                    />
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/ll_face_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+            <!-- 表情 -->
+            <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_face_contains"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    />
+            <!-- 页面点 -->
+            <RadioGroup
+                    android:id="@+id/rg_face_page_point"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    >
+
+                <RadioButton
+                        android:id="@+id/rb_face_page_point"
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:layout_margin="4px"
+                        android:visibility="gone"
+                        />
+            </RadioGroup>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    >
+                <!-- 删除表情 -->
+                <ImageButton
+                        android:id="@+id/ib_face_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/face_delete"
+                        />
+                <!-- 发送按钮 -->
+                <Button
+                        android:id="@+id/btn_send"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/ib_face_delete"
+                        android:background="@color/yellow"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="5dp"
+                        android:text="发送"
+                        android:textSize="23sp"
+                        />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/input_layout"
+            android:layout_below="@id/top_lay"
+            >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+            <!--<com.shishiTec.HiMaster.UI.Views.SuperSwipeRefreshLayout-->
+            <!--android:id="@+id/bigman_comment_swiperefreshlayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginBottom="100px"-->
+            <!--android:scrollbars="vertical">-->
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_private_letter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="100px"
+                    >
+            </android.support.v7.widget.RecyclerView>
+
+            <!--</com.shishiTec.HiMaster.UI.Views.SuperSwipeRefreshLayout>-->
+
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/reselete"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:text="发表评论"
+                />
+    </FrameLayout>
+
+
+</RelativeLayout>

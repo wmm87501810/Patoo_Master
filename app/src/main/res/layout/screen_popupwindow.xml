@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/pop_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="600px"
+            android:background="#fff"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gap_1px"
+                android:background="@color/color_99"
+                />
+
+        <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gap_80px"
+                android:orientation="horizontal"
+                >
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/al_popup_paixu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+
+                <TextView
+                        android:id="@+id/tv_paixu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="排序"
+                        android:textColor="@color/black"
+                        />
+
+                <ImageView
+                        android:id="@+id/img_popup1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5px"
+                        android:layout_toRightOf="@id/tv_paixu"
+                        android:src="@mipmap/jiantoushang"
+                        />
+            </com.zhy.autolayout.AutoRelativeLayout>
+
+            <View
+                    android:layout_width="@dimen/gap_1px"
+                    android:layout_height="@dimen/gap_40px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/color_99"
+                    />
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                    android:id="@+id/al_popup_paixu2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+
+                <TextView
+                        android:id="@+id/tv_paixu2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="筛选"
+                        android:textColor="@color/black"
+                        />
+
+                <ImageView
+                        android:id="@+id/img_popup2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5px"
+                        android:layout_toRightOf="@id/tv_paixu2"
+                        android:src="@mipmap/jiantoushang"
+                        android:visibility="invisible"
+                        />
+            </com.zhy.autolayout.AutoRelativeLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gap_1px"
+                android:background="@color/color_99"
+                />
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_popup_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:visibility="gone"
+                >
+
+        </android.support.v7.widget.RecyclerView>
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_popup_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:visibility="gone"
+                >
+
+        </android.support.v7.widget.RecyclerView>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoRelativeLayout>

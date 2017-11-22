@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_99"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+        <ImageView
+                android:layout_width="@dimen/gap_100px"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:scaleType="center"
+                android:src="@mipmap/arrow_black"
+                />
+
+        <EditText
+                android:id="@+id/edit_search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gap_100px"
+                android:layout_weight="9"
+                android:background="@null"
+                android:drawableLeft="@mipmap/sousuo"
+                android:hint="   搜索附近位置"
+                android:paddingLeft="@dimen/gap_10px"
+                android:textSize="@dimen/gap_36px"
+                />
+
+        <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="120px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/palegreen"
+                android:gravity="center"
+                android:text="搜索"
+                android:textColor="@color/white"
+                />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_img_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_88px"
+            android:background="@color/default_yellow"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            >
+
+        <ImageView
+                android:id="@+id/img_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/gap_24px"
+                android:paddingLeft="@dimen/gap_10px"
+                android:src="@mipmap/arrow_black"
+                android:textSize="@dimen/gap_36px"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="选择位置"
+                />
+
+        <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="@dimen/gap_40px"
+                android:layout_height="@dimen/gap_40px"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="@dimen/gap_24px"
+                android:src="@mipmap/sousuo"
+                android:textColor="@color/white"
+                />
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_1px"
+            android:background="@color/color_99"
+            />
+
+    <TextView
+            android:id="@+id/not_address"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/gap_36px"
+            android:text="不显示地理位置"
+            android:textColor="@color/black"
+            android:textSize="@dimen/gap_36px"
+            />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_1px"
+            android:background="@color/color_99"
+            />
+
+    <TextView
+            android:id="@+id/now_city"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/gap_36px"
+            android:text="当前城市"
+            android:textColor="@color/black"
+            android:textSize="@dimen/gap_36px"
+            />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_1px"
+            android:background="@color/color_99"
+            />
+
+    <com.shishiTec.HiMaster.UI.Views.SuperSwipeRefreshLayout
+            android:id="@+id/periphery_swiperefreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            >
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+        </android.support.v7.widget.RecyclerView>
+    </com.shishiTec.HiMaster.UI.Views.SuperSwipeRefreshLayout>
+</LinearLayout>

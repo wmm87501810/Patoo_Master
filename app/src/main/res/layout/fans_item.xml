@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="210px"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/fans_icon"
+        android:layout_width="130px"
+        android:layout_height="130px"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/gap_20px"
+        android:scaleType="fitXY"
+        tools:background="@mipmap/icon_default" />
+
+    <CheckBox
+        android:id="@+id/check_focus"
+        android:layout_width="81px"
+        android:layout_height="62px"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/gap_20px"
+        android:background="@drawable/ccc_frame"
+        android:button="@null"
+        android:drawableLeft="@drawable/check_focus"
+        android:gravity="center"
+        android:paddingLeft="@dimen/gap_20px" />
+
+    <TextView
+        android:id="@+id/nikeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/gap_20px"
+        android:layout_marginTop="68px"
+        android:layout_toRightOf="@id/fans_icon"
+        android:singleLine="true"
+        android:textColor="@color/color_4242"
+        android:textSize="@dimen/gap_32px"
+        tools:text="职业老司机" />
+
+    <TextView
+        android:id="@+id/intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nikeName"
+        android:layout_marginLeft="@dimen/gap_20px"
+        android:layout_marginTop="@dimen/gap_20px"
+        android:layout_toLeftOf="@id/check_focus"
+        android:layout_toRightOf="@id/fans_icon"
+        android:textColor="@color/color_b2"
+        android:textSize="@dimen/gap_28px"
+        tools:text="老司机快开车" />
+
+
+</RelativeLayout>

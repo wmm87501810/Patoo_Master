@@ -1,0 +1,33 @@
+<com.zhy.autolayout.AutoLinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@+id/iv_master_detail_course_cover"
+        android:layout_width="232px"
+        android:layout_height="232px"
+        android:src="@mipmap/jiazanshibaitu"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="30px" />
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50px"
+        >
+        <TextView
+            android:id="@+id/tv_master_detail_course_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="插花、参禅"
+            android:layout_marginLeft="40px"
+            />
+        <TextView
+            android:id="@+id/tv_master_detail_relevant_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="闸北区古北路  13KM"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="40px"
+            />
+    </com.zhy.autolayout.AutoRelativeLayout>
+</com.zhy.autolayout.AutoLinearLayout>

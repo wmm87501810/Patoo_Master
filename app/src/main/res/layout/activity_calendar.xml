@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+        >
+    <View
+            android:id="@+id/vMasker"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#e0000000"
+            android:visibility="gone"
+            />
+    <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal"
+            >
+
+        <TextView
+                android:id="@+id/left_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16px"
+                android:drawableLeft="@mipmap/arrow_black"
+                android:gravity="center_vertical"
+                android:text=" 2016"
+                android:textSize="@dimen/gap_36px"
+                />
+
+        <TextView
+                android:id="@+id/city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:text="选择上课时间"
+                android:textSize="@dimen/gap_36px"
+                />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            >
+
+        <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dip"
+                android:layout_marginBottom="2dip"
+                android:layout_marginTop="2dip"
+                >
+
+            <TableRow>
+
+                <TextView
+                        style="@style/dateStyle"
+                        android:text="@string/sunday"
+                        android:textColor="@color/canlendar_text_color"
+                        />
+
+                <TextView
+                        style="@style/dateStyle"
+                        android:text="@string/monday"
+                        android:textColor="@color/canlendar_text_color"
+                        />
+
+                <TextView
+                        style="@style/dateStyle"
+                        android:text="@string/thesday"
+                        android:textColor="@color/canlendar_text_color"
+                        />
+
+                <TextView
+                        style="@style/dateStyle"
+                        android:text="@string/wednesday"
+                        android:textColor="@color/canlendar_text_color"
+                        />
+
+                <TextView
+                        style="@style/dateStyle"
+                        android:text="@string/thursday"
+                        android:textColor="@color/canlendar_text_color"
+                        />
+
+                <TextView
+                        style="@style/dateStyle"
+                        android:text="@string/friday"
+                        android:textColor="@color/canlendar_text_color"
+                        />
+
+                <TextView
+                        style="@style/dateStyle"
+                        android:text="@string/saturday"
+                        android:textColor="@color/canlendar_text_color"
+                        />
+            </TableRow>
+        </TableLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                >
+
+            <TextView
+                    android:id="@+id/tvCurrentMonth1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/gap_100px"
+                    android:layout_marginLeft="@dimen/gap_26px"
+                    android:layout_marginTop="@dimen/gap_34px"
+                    android:gravity="center_vertical"
+                    android:text="月份"
+                    android:textColor="#323232"
+                    android:textSize="22sp"
+                    />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/gap_1px"
+                    android:background="@color/windowBackground"
+                    />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                    android:id="@+id/RL1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+            </com.zhy.autolayout.AutoLinearLayout>
+
+            <TextView
+                    android:id="@+id/tvCurrentMonth2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/gap_100px"
+                    android:layout_marginLeft="@dimen/gap_26px"
+                    android:layout_marginTop="@dimen/gap_34px"
+                    android:gravity="center_vertical"
+                    android:text="月份"
+                    android:textColor="#323232"
+                    android:textSize="22sp"
+                    />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/gap_1px"
+                    android:background="@color/windowBackground"
+                    />
+
+            <com.zhy.autolayout.AutoLinearLayout
+                    android:id="@+id/RL2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </ScrollView>
+
+</com.zhy.autolayout.AutoLinearLayout>

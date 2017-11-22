@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/back_total"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/gap_10dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/finish"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_toRightOf="@id/back_total"
+            android:layout_marginLeft="90dp"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/gap_10dp"
+            android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/rank_list_tag_friend"
+            android:layout_width="40dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:duplicateParentState="true"
+                android:paddingBottom="15dip"
+                android:paddingTop="15dip"
+                android:text="好友"
+                />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="3dp"
+                android:layout_gravity="bottom"
+                android:background="@color/white" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="3dp"
+                android:layout_gravity="bottom"
+                android:background="@color/red"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/rank_list_tag_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:duplicateParentState="true"
+                android:paddingBottom="15dip"
+                android:paddingTop="15dip"
+                android:text="消息"
+                />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_gravity="bottom"
+                android:background="@color/white" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="3dp"
+                android:layout_gravity="bottom"
+                android:background="@color/red"
+                android:visibility="invisible" />
+        </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_1a" />
+
+    <com.shishiTec.HiMaster.UI.Views.SuperSwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout_rv_myfrgmsg_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_rv_myfrgmsg_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_bg"
+            >
+        </android.support.v7.widget.RecyclerView>
+    </com.shishiTec.HiMaster.UI.Views.SuperSwipeRefreshLayout>
+
+
+</LinearLayout>

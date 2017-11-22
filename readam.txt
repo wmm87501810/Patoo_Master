@@ -1,0 +1,8 @@
+1.蓝牙4.0,4.1适配SensorTag-CC2650-master类 mainactivity里
+
+2 .阿里云参数配置直接看SimpleClient4IOT类
+
+3. 切图资源在文件目录下
+
+4. 首页MianUIActivity类去跟踪各个模块的activity的  discover发现模块已全部完成，其他模块根据界面子ui内容自行扩展，
+各个模块的首页已搭建好。

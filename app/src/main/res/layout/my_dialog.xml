@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/black"
+        >
+    <com.shishiTec.HiMaster.UI.Views.LooperViewPager
+            android:id="@+id/myDialogViewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+          >
+    </com.shishiTec.HiMaster.UI.Views.LooperViewPager>
+</FrameLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mall_all_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        >
+
+    <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/test"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal"
+            >
+
+        <ImageView
+                android:id="@+id/left_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16px"
+                android:src="@mipmap/arrow_black"
+                />
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/gap_40px"
+                android:id="@+id/city"
+                android:layout_weight="1"
+                android:visibility="visible"
+                >
+
+            <TextView
+                    android:id="@+id/tv_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:drawableRight="@mipmap/bottom_arrow"
+                    android:text="上海  "
+                    />
+        </RelativeLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+                android:id="@+id/search_mall"
+                android:layout_width="wrap_content"
+                android:layout_height="50px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/gap_40px"
+                android:layout_marginRight="@dimen/gap_24px"
+                android:layout_weight="1"
+                android:background="@drawable/shape_master_search"
+                android:visibility="gone"
+                >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="60px"
+                    android:text="搜索"
+                    android:textColor="@color/white"
+                    android:textSize="26px"
+                    />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <ImageView
+                android:id="@+id/screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="50px"
+                android:src="@mipmap/enterprise"
+                android:visibility="gone"
+                />
+
+        <ImageView
+                android:id="@+id/gift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="42px"
+                android:src="@mipmap/gift"
+                />
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <!--<com.zhy.autolayout.AutoRelativeLayout-->
+    <!--android:id="@+id/test"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="88px"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:background="@color/colorAccent"-->
+    <!--android:orientation="horizontal"-->
+    <!--&gt;-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/left_back"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="16px"-->
+    <!--android:src="@mipmap/arrow_black"-->
+    <!--/>-->
+
+    <!--<com.zhy.autolayout.AutoLinearLayout-->
+    <!--android:id="@+id/search_mall"-->
+    <!--android:layout_width="492px"-->
+    <!--android:layout_height="50px"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="@dimen/gap_40px"-->
+    <!--android:layout_toRightOf="@id/left_back"-->
+    <!--android:background="@drawable/shape_master_search"-->
+    <!--&gt;-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:layout_marginLeft="60px"-->
+    <!--android:text="搜索"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="26px"-->
+    <!--/>-->
+    <!--</com.zhy.autolayout.AutoLinearLayout>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/city"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:drawableRight="@mipmap/bottom_arrow"-->
+    <!--android:text="上海  "-->
+    <!--/>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/gift"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginRight="42px"-->
+    <!--android:src="@mipmap/gift"-->
+    <!--/>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/screen"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginRight="50px"-->
+    <!--android:layout_toLeftOf="@id/gift"-->
+    <!--android:src="@mipmap/enterprise"-->
+    <!--android:visibility="visible"-->
+    <!--/>-->
+    <!--</com.zhy.autolayout.AutoRelativeLayout>-->
+
+    <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/fragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            >
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

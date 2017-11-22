@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoFrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/course_detail_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+            <RelativeLayout
+                    android:id="@+id/fr_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="650px"
+                        >
+
+                    <ImageView
+                            android:id="@+id/iv_course_cover"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/jiazanshibaitu"
+                            />
+                </FrameLayout>
+
+                <com.zhy.autolayout.AutoRelativeLayout
+                        android:id="@+id/test"
+                        android:layout_width="match_parent"
+                        android:layout_height="88px"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/transparent"
+                        android:orientation="horizontal"
+                        >
+
+                    <ImageView
+                            android:id="@+id/left_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="16px"
+                            android:src="@mipmap/jiantou_white"
+                            />
+
+                    <ImageView
+                            android:id="@+id/gift"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="42px"
+                            android:src="@mipmap/shangchuan"
+                            />
+
+                    <ImageView
+                            android:id="@+id/enterprise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="50px"
+                            android:layout_toLeftOf="@id/gift"
+                            android:src="@mipmap/shoucang_white"
+                            />
+                </com.zhy.autolayout.AutoRelativeLayout>
+            </RelativeLayout>
+
+            <include
+                    android:id="@+id/include_center_detail"
+                    layout="@layout/include_course_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fr_rl"
+                    />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_88px"
+            android:layout_gravity="bottom"
+            android:background="@color/red"
+            android:orientation="horizontal"
+            >
+
+        <RelativeLayout
+                android:id="@+id/rl_course_detail_question"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#eae5d9"
+                >
+
+            <TextView
+                    android:id="@+id/tv_bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="提问"
+                    />
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/gap_26px"
+                    android:layout_toLeftOf="@id/tv_bottom"
+                    android:src="@mipmap/post"
+                    />
+        </RelativeLayout>
+
+        <TextView
+                android:id="@+id/course_detail_about_her"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/default_yellow"
+                android:gravity="center"
+                android:text="约她"
+                android:textColor="@color/black"
+                />
+    </LinearLayout>
+</com.zhy.autolayout.AutoFrameLayout>

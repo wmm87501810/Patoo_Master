@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/release_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        >
+
+    <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_88px"
+            android:background="@color/default_yellow"
+            android:orientation="horizontal"
+            >
+
+        <TextView
+                android:id="@+id/left_back_release"
+                android:layout_width="@dimen/gap_88px"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/black"
+                />
+
+        <TextView
+                android:id="@+id/detail_zambia_status"
+                android:layout_width="1px"
+                android:layout_height="1px"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="分享发布"
+                android:textColor="@color/black"
+                />
+
+        <TextView
+                android:id="@+id/release_tv"
+                android:layout_width="@dimen/gap_88px"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="发布"
+                android:textColor="@color/black"
+                />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <EditText
+            android:id="@+id/release_edit"
+            android:layout_width="match_parent"
+            android:layout_height="200px"
+            android:layout_marginLeft="26px"
+            android:layout_marginRight="26px"
+            android:layout_marginTop="@dimen/gap_10px"
+            android:background="@null"
+            android:hint="这一刻你想说什么........"
+            android:textSize="@dimen/gap_34px"
+            />
+
+    <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <GridView
+                android:id="@+id/release_gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26px"
+                android:layout_marginRight="26px"
+                android:horizontalSpacing="@dimen/gap_20px"
+                android:numColumns="4"
+                android:verticalSpacing="18px"
+                >
+        </GridView>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_1px"
+            android:layout_marginTop="@dimen/gap_30px"
+            android:background="@color/color_99"
+            />
+
+    <LinearLayout
+            android:id="@+id/release_address"
+            android:layout_width="match_parent"
+            android:layout_height="88px"
+            >
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/gap_36px"
+                android:src="@mipmap/weizhi"
+                />
+
+        <TextView
+                android:id="@+id/address_release_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/gap_30px"
+                android:layout_weight="1"
+                android:text="所在位置"
+                android:textSize="@dimen/gap_30px"
+                />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/gap_36px"
+                android:src="@mipmap/jiantou_white"
+                />
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_1px"
+            android:background="@color/color_99"
+            />
+</com.zhy.autolayout.AutoLinearLayout>

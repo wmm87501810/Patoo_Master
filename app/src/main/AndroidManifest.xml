@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shishiTec.HiMaster">
+
+    <!-- NFC权限 银联支付需要,部分手机含有NFC卡,银联支付时必须添加 -->
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 往sdcard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 往sdcard中读取数据的权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    //shareSdk所需权限
+    <!--<uses-permission android:name="android.permission.GET_TASKS" />-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 个推SDK权限配置开始 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="getui.permission.GetuiService.com.shishiTec.HiMaster" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <!-- 自定义权限 -->
+    <permission
+        android:name="getui.permission.GetuiService.com.shishiTec.HiMaster"
+        android:protectionLevel="normal" />
+
+    <!-- 个推SDK权限配置结束 -->
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="design_width"
+            android:value="768" />
+        <meta-data
+            android:name="design_height"
+            android:value="1280" />
+        <meta-data
+            android:name="com.shishiTec.HiMaster.UI.Views.GlideConfigureModule"
+            android:value="GlideModule" />
+
+        <activity android:name=".UI.Activity.MainActivity" />
+        //ShareSdk配置
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent1103383984" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 微信支付回调Activity -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Transparent" />
+        <!-- 银行支付入口 -->
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:screenOrientation="portrait" />
+        <!-- 支付宝支付入口 alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- alipay sdk end -->
+        <!-- 友盟统计分析 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="55482ed267e58ee11700734d" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+
+        <!-- 百度sdk所需服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <!-- 配置第三方Receiver -->
+        <receiver
+            android:name=".getui.PushMasterReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.${GETUI_APP_ID}" />
+            </intent-filter>
+        </receiver>
+        <!-- 百度AccessKey -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="f31G162Unku4ezXYu2hOoGUB" />
+
+        <activity
+            android:name=".UI.Activity.Accouont.RegisterActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".UI.Activity.MyFriendOrMessage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.Accouont.SetSecurityCode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.Accouont.UpDataMyCenter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.MianUIActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.Accouont.SetSex"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.Accouont.MyCenter"
+            android:screenOrientation="portrait" />
+        <!-- <activity android:name=".UI.Activity.UserCenter.MyVoucherActivity" /> -->
+        <activity
+            android:name=".UI.Activity.LeaderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.Discover"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.Mypapa"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.MySheQu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.MyStatus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.DiscoverUserDetailsInfo"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".UI.Activity.master.MasterDetailActivity" />
+        <activity
+            android:name=".UI.Activity.Accouont.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.UserCenter.FeedbackActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UI.Activity.bigManShare.CommentShowPhotoListActivity" />
+        <activity android:name=".UI.Activity.bigManShare.CommentPhotoActivity" />
+        <activity
+            android:name=".UI.Activity.UserCenter.MyCouponActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.UserCenter.MyMDActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.UserCenter.MyFansAndFollowsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.UserCenter.MyCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.bigManShare.bigManCommentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".UI.Activity.UserCenter.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.UserCenter.ModifyPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.bigManShare.BigManShareDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.UserCenter.MyShareActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.UserCenter.UserInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".UI.Activity.UserCenter.WelfareActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.master.MasterCommentListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.bigManShare.BigManHomePageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.UserCenter.MDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".UI.Activity.master.AddCourseActivity" />
+        <activity android:name=".UI.Activity.UserCenter.UserOrderActivity" />
+        <activity android:name=".UI.Activity.master.MasterHomePageActivity" />
+        <activity android:name=".UI.Activity.master.MasterUploadActivity" />
+        <activity android:name=".UI.Activity.master.AddTagActivity" />
+        <activity android:name=".UI.Activity.bigManShare.PeripheryActivity" />
+        <activity android:name=".UI.Activity.master.MasterSearchActivity" />
+        <activity android:name=".UI.Activity.master.SearchActivity" />
+        <activity android:name=".UI.Activity.mall.MallHomeActivity" />
+        <activity android:name=".UI.Activity.Accouont.InformationActivity" />
+        <activity android:name=".UI.Activity.mall.CourseDetailActivity" />
+        <activity android:name=".UI.Activity.mall.CalendarActivity" />
+        <activity android:name=".UI.Activity.PayConfirmActivity" />
+        <activity android:name=".UI.Activity.mall.OrderPaymentActivity" />
+        <activity android:name=".UI.Activity.Accouont.NotificationActivity" />
+        <activity android:name=".UI.Activity.Accouont.CommentReplayActivity" />
+        <activity android:name=".UI.Activity.Accouont.PrivateLetterActivity" />
+        <activity android:name=".UI.Activity.Accouont.PrivateLetterListActivity" />
+        <activity android:name=".UI.Activity.SweepActivity" />
+        <activity android:name=".UI.Activity.bigManShare.ReleaseActivity" />
+        <activity android:name=".UI.Activity.mall.MallCardActivity"></activity>
+        <activity android:name=".UI.Activity.mall.MallCouponActivity"></activity>
+        <activity android:name=".UI.Activity.mall.MallMapActivity"></activity>
+        <activity android:name=".UI.Activity.mall.MallCardDetailActtivity"></activity>
+        <activity android:name=".UI.Activity.mall.MallOtherStudyActivity"></activity>
+        <activity android:name=".UI.Activity.UserCenter.BuyOrderActivity"></activity>
+        <activity android:name=".UI.Activity.UserCenter.MyCollectionActivity"></activity>
+        <activity android:name=".UI.Adapter.userCenter.BuyCardListActivity"></activity>
+        <activity android:name=".UI.Activity.master.OrderManagerActivity"></activity>
+
+    </application>
+
+</manifest>
