@@ -22,7 +22,6 @@
     <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
-
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- 往sdcard中写入数据的权限 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -35,7 +34,7 @@
     <!-- 这个权限用于访问GPS定位 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     //shareSdk所需权限
-    <!--<uses-permission android:name="android.permission.GET_TASKS" />-->
+    <!-- <uses-permission android:name="android.permission.GET_TASKS" /> -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
@@ -150,7 +149,6 @@
         <activity
             android:name=".UI.Activity.Accouont.RegisterActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".UI.Activity.MyFriendOrMessage"
             android:screenOrientation="portrait" />
@@ -191,7 +189,6 @@
         <activity
             android:name=".UI.Activity.DiscoverUserDetailsInfo"
             android:screenOrientation="portrait" />
-
         <activity android:name=".UI.Activity.master.MasterDetailActivity" />
         <activity
             android:name=".UI.Activity.Accouont.LoginActivity"
@@ -277,16 +274,16 @@
         <activity android:name=".UI.Activity.Accouont.PrivateLetterListActivity" />
         <activity android:name=".UI.Activity.SweepActivity" />
         <activity android:name=".UI.Activity.bigManShare.ReleaseActivity" />
-        <activity android:name=".UI.Activity.mall.MallCardActivity"></activity>
-        <activity android:name=".UI.Activity.mall.MallCouponActivity"></activity>
-        <activity android:name=".UI.Activity.mall.MallMapActivity"></activity>
-        <activity android:name=".UI.Activity.mall.MallCardDetailActtivity"></activity>
-        <activity android:name=".UI.Activity.mall.MallOtherStudyActivity"></activity>
-        <activity android:name=".UI.Activity.UserCenter.BuyOrderActivity"></activity>
-        <activity android:name=".UI.Activity.UserCenter.MyCollectionActivity"></activity>
-        <activity android:name=".UI.Adapter.userCenter.BuyCardListActivity"></activity>
-        <activity android:name=".UI.Activity.master.OrderManagerActivity"></activity>
-
+        <activity android:name=".UI.Activity.mall.MallCardActivity" />
+        <activity android:name=".UI.Activity.mall.MallCouponActivity" />
+        <activity android:name=".UI.Activity.mall.MallMapActivity" />
+        <activity android:name=".UI.Activity.mall.MallCardDetailActtivity" />
+        <activity android:name=".UI.Activity.mall.MallOtherStudyActivity" />
+        <activity android:name=".UI.Activity.UserCenter.BuyOrderActivity" />
+        <activity android:name=".UI.Activity.UserCenter.MyCollectionActivity" />
+        <activity android:name=".UI.Adapter.userCenter.BuyCardListActivity" />
+        <activity android:name=".UI.Activity.master.OrderManagerActivity" />
+        <activity android:name=".UI.Activity.UserCenter.BaseActivity"></activity>
     </application>
 
 </manifest>
